@@ -25,16 +25,16 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
-    - name: Install boost
-      uses: MarkusJx/install-boost@v2.1.0
-      id: install-boost
-      with:
-        # REQUIRED: Specify the required boost version
-        # A list of supported versions can be found here: 
-        # https://github.com/actions/boost-versions/blob/main/versions-manifest.json
-        boost_version: 1.78.0
-        platform_version: 2019
-        toolset: msvc
+    # - name: Install boost
+    #   uses: MarkusJx/install-boost@v2.1.0
+    #   id: install-boost
+    #   with:
+    #     # REQUIRED: Specify the required boost version
+    #     # A list of supported versions can be found here:
+    #     # https://github.com/actions/boost-versions/blob/main/versions-manifest.json
+    #     boost_version: 1.78.0
+    #     platform_version: 2019
+    #     toolset: msvc
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
